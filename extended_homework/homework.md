@@ -24,7 +24,37 @@ Using the SQL Database file given to you as the source of data to answer the que
 
   1. Select the names and prices of all shows, ordered by price in ascending order.
 
+  SQL STATEMENT: SELECT name, price FROM shows ORDER BY price ASC;
+
+  OUTPUT: 
+
+                    name                   | price 
+-----------------------------------------+-------
+ Two girls, one cup of comedy            |  6.00
+ Best of Burlesque                       |  7.99
+ Two become One                          |  8.50
+ Urinetown                               |  8.50
+ Paul Dabek Mischief                     | 12.99
+ Le Haggis                               | 12.99
+ Joe Stilgoe: Songs on Film – The Sequel | 16.50
+ Game of Thrones - The Musical           | 16.50
+ Shitfaced Shakespeare                   | 16.50
+ Aaabeduation – A Magic Show             | 17.99
+ Camille O'Sullivan                      | 17.99
+ Balletronics                            | 32.00
+ Edinburgh Royal Tattoo                  | 32.99
+(13 rows)
+
   10. Select the average price of all shows.
+  SQL STATEMENT:  SELECT to_char(AVG (price),'FM999999999.00') AS average_price
+  
+  OUTPUT:
+
+  average_price 
+---------------
+ 15.96
+(1 row)
+
 
   11. Select the price of the least expensive show.
 
