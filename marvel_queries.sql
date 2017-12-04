@@ -1,3 +1,5 @@
+--##Questions
+
 -- SELECT * FROM movies;
 
 -- SELECT name FROM people;
@@ -26,4 +28,8 @@
 -- UPDATE movies SET show_time = '21:30'
 -- WHERE title = 'Guardians of the Galaxy' AND id = 11;
 
-SELECT * FROM movies ORDER BY show_time;
+
+-- ##Extensions
+
+-- DELETE FROM movies WHERE id = 16 OR id = 17;
+-- SELECT * FROM movies;

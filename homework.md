@@ -257,6 +257,14 @@ UPDATE 1
 
 1. Research how to delete multiple entries from your table in a single command.
 
+DELETE FROM table_name WHERE [condition] OR [condition]
+
+also
+
+DELETE FROM films
+  WHERE producer_id IN (SELECT id FROM producers WHERE name = 'foo');  in this example the sub-select identifies 
+  and id or id's to be used in the DELETE.  The same thing can be achieved using 'USING' parameter.
+
 ## Extra Extension
 
 - see the extended_homework folder
