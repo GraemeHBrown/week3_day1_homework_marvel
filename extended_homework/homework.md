@@ -57,18 +57,80 @@ Using the SQL Database file given to you as the source of data to answer the que
 
 
   11. Select the price of the least expensive show.
+SQL STATEMENT: SELECT name, price FROM shows WHERE price = (SELECT MIN(price) FROM shows);
+
+OUTPUT:
+               name             | price 
+------------------------------+-------
+ Two girls, one cup of comedy |  6.00
+(1 row)
 
   12. Select the sum of the price of all shows.
+SQL STATEMENT: SELECT SUM (price) AS sum_of_price FROM shows;
+
+OUTPUT:  
+ sum_of_price 
+--------------
+       207.44
+(1 row)
+
 
   13. Select the sum of the price of all shows whose prices is less than £20.
+  SQL STATEMENT: SELECT SUM (price) AS sum_of_price_less_than_20 FROM shows WHERE price < 20.00;
+
+  OUTPUT:
+   sum_of_price_less_than_20 
+---------------------------
+                    142.45
+(1 row)
 
   14. Select the name and price of the most expensive show.
+SQL STATEMENT: SELECT name, price FROM shows WHERE price IN (SELECT MAX(price) FROM shows);
+
+OUTPUT:
+            name          | price 
+------------------------+-------
+ Edinburgh Royal Tattoo | 32.99
+(1 row)
 
   15. Select the name and price of the second from cheapest show.
 
+  SQL STATEMENT: SELECT name, price FROM shows ORDER BY price ASC LIMIT 1 OFFSET 1;
+
+  OUTPUT:
+
+         name        | price 
+-------------------+-------
+ Best of Burlesque |  7.99
+(1 row)
+
   16. Select the names of all users whose names start with the letter "M".
 
+  SQL STATEMENT: SELECT name FROM users WHERE name LIKE 'M%' ORDER BY name;
+
+  OUTPUT:
+
+       name      
+---------------
+ Manny Chita
+ Mark Blanford
+ Max Robson
+(3 rows)
+
   17. Select the names of users whose names contain "er".
+
+  SQL STATEMENT: SELECT name FROM users WHERE name LIKE '%er%' ORDER BY name;
+
+  OUTPUT:
+  
+       name       
+------------------
+ Douglas Sangster
+ John Harper
+ Kris Anderson
+ Robert Henderson
+(4 rows)
+
 
 
 ## Section 2
